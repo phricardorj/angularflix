@@ -1,0 +1,58 @@
+header {
+  height: 80vh;
+  width: 100%;
+
+  background: url("/assets/images/background.png");
+  background-size: cover;
+
+  color: #fff;
+}
+
+header .logo img {
+  padding: 30px 80px;
+}
+
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header .container h1 {
+  font-size: 72px;
+  text-align: center;
+  line-height: 6rem;
+}
+
+header .container .promo {
+  padding: 5px 0;
+  font-size: 32px;
+}
+
+header .container .action {
+  padding: 30px 0;
+  font-size: 28px;
+}
+
+header .container button {
+  background: #e50914;
+  height: 80px;
+  width: 220px;
+  border-radius: 10px;
+  color: #fff;
+
+  outline: 0;
+  box-shadow: 0;
+  border: 0;
+
+  margin: 20px 0;
+  font-size: 28px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+header .container button:hover {
+  background: #fd000d;
+}
