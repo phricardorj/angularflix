@@ -1,4 +1,8 @@
-# Netflix
+# Netflix Clone UI 
+
+# ⚙️ Tecnologias usadas neste projeto
+- [Angular](https://angular.io/)
+- [Typescript](https://www.typescriptlang.org/)
 
 ## 🖖 Squad Members<br>
 <table>
