@@ -5,18 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginFormComponent } from './loginScreen/login-form/login-form.component';
 import { LoginScreenComponent } from './loginScreen/login-screen/login-screen.component';
+import { PromotionalGuideComponent } from './promotional-guide/promotional-guide.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginFormComponent,
-    LoginScreenComponent
+    LoginScreenComponent,
+    PromotionalGuideComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
