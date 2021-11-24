@@ -1,33 +1,88 @@
 .promotionGuide {
-  position: relative;
-
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
   align-items: center;
-
-  height: 500px;
-  width: 100%;
-
+  min-height: 500px;
   background: #000;
   border-top: 5px solid #2d2d2d;
   color: #fff;
+  padding-left: 10vw;
+  padding-right: 10vw;
 }
 
 .promotionGuide h1 {
   font-size: 50px;
 }
 
+.promotionGuide .left, .promotionGuide .right {
+  padding: 20px;
+}
+
 .promotionGuide p {
   font-size: 28px;
 }
 
-.promotionGuide .left {
-  position: absolute;
-  left: 225px;
-  padding: 10px;
+.promotionGuide .image img {
+  max-width: 30vw;
 }
 
-.promotionGuide .right {
-  position: absolute;
-  right: 225px;
-  padding: 10px;
+@media (max-width: 1400px) {
+  .promotionGuide {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .promotionGuide h1 {
+    font-size: 40px;
+  }
+
+  .promotionGuide p {
+    font-size: 24px;
+  }
+
+  .promotionGuide .image img {
+    max-width: 40vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .promotionGuide {
+    flex-flow: column nowrap;
+    text-align: center;
+  }
+
+  .promotionGuide .image img {
+    max-width: 50vw;
+  }
+
+  .promotionGuide h1 {
+    margin-top: 3rem;
+  }
+
+  .promotionGuide img {
+    margin-top: 1rem;
+  }
+
+  .top-text {
+    order: 1;
+  }
+
+  .bottom-text {
+    order: 2;
+  }
+}
+
+@media (max-width: 576px) {
+  .promotionGuide h1 {
+    font-size: 30px;
+  }
+
+  .promotionGuide p {
+    font-size: 18px;
+  }
+
+  .promotionGuide .image img {
+    max-width: 90vw;
+  }
 }

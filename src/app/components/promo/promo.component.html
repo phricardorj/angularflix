@@ -2,7 +2,7 @@
   <div class="left">
     <div class="text">
       <h1>{{ title }}</h1>
-      <p style="width: 60%;">
+      <p>
         {{ text }}
       </p>
     </div>
@@ -15,12 +15,12 @@
 </section>
 
 <section *ngIf="direction === 'right'" class="promotionGuide">
-  <div class="left">
+  <div class="left bottom-text">
     <div class="image">
       <img src="assets/images/{{ image }}" />
     </div>
   </div>
-  <div class="right">
+  <div class="right top-text">
     <div class="text">
       <h1>{{ title }}</h1>
       <p>{{ text }}</p>
