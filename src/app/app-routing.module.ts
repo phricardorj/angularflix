@@ -8,6 +8,7 @@ import { CatalogComponent } from './pages/catalog/catalog.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 const routes: Routes = [
+  { path: '', component: HomePageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'profiles', component: SelectProfileComponent, canActivate: [AuthGuard] },
   { path: 'catalog', component: CatalogComponent, canActivate: [AuthGuard] },
