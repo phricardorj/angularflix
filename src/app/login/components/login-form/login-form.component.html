@@ -1,20 +1,33 @@
 <div class="login-form">
   <h2>Entrar</h2>
-  <form>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="form-control">
-      <input type="text" placeholder="Email ou número de telefone" />
+      <input
+        type="text"
+        placeholder="Email ou número de telefone"
+        formControlName="user"
+      />
       <p class="warning-text">
         Informe um e-mail ou número de telefone válido.
       </p>
     </div>
     <div class="form-control">
-      <input type="password" placeholder="Senha" />
+      <input type="password" placeholder="Senha" formControlName="password" />
       <p class="warning-text">A senha deve ter entre 4 e 60 caracteres.</p>
     </div>
     <button>Entrar</button>
     <footer>
-      Esta página é protegida pelo Google reCAPTCHA para garantir que você não é
-      um robô. <a href="#">Saiba mais.</a>
+      <p>
+        Esta página é protegida pelo Google reCAPTCHA para garantir que você não
+        é um robô.
+        <a *ngIf="!showMore" href="#" (click)="showMore = true">Saiba mais.</a>
+      </p>
+      <p *ngIf="showMore">
+        As informações recolhidas pelo Google reCAPTCHA estão sujeitas à
+        Política de Privacidade e Termos de Uso, e são usadas para oferecer,
+        manter e melhorar o serviço reCAPTCHA e por questões de segurança (não
+        são usadas para exibir anúncios personalizados pelo Google).
+      </p>
     </footer>
   </form>
 </div>
