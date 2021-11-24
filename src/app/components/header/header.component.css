@@ -21,6 +21,7 @@ header .container {
 }
 
 header .container h1 {
+  padding: 5px;
   font-size: 72px;
   line-height: 6rem;
 }
@@ -31,7 +32,7 @@ header .container .promo {
 }
 
 header .container .action {
-  padding: 30px 5px;
+  padding: 30px 15px;
   font-size: 28px;
 }
 
@@ -62,6 +63,23 @@ header .container .btn:hover {
   background: #e50914;
 }
 
+@media (max-width: 992px) {
+  header .container h1 {
+    font-size: 48px;
+    line-height: 4rem;
+  }
+
+  header .container .promo,
+  header .container .action {
+    font-size: 24px;
+  }
+
+  header .container .btn {
+    height: 60px;
+    font-size: 24px;
+  }
+}
+
 @media (max-width: 576px) {
   header .logo {
     text-align: center;
@@ -75,8 +93,6 @@ header .container .btn:hover {
   header .container h1 {
     font-size: 32px;
     line-height: 3rem;
-    padding-left: 5px;
-    padding-right: 5px;
   }
 
   header .container .promo,
@@ -85,7 +101,7 @@ header .container .btn:hover {
   }
 
   header .container .btn {
-    height: 60px;
     font-size: 20px;
+    height: 50px;
   }
 }
