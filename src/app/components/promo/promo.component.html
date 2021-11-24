@@ -1,0 +1,29 @@
+<section *ngIf="direction === 'left'" class="promotionGuide">
+  <div class="left">
+    <div class="text">
+      <h1>{{ title }}</h1>
+      <p style="width: 60%;">
+        {{ text }}
+      </p>
+    </div>
+  </div>
+  <div class="right">
+    <div class="image">
+      <img src="assets/images/{{ image }}" />
+    </div>
+  </div>
+</section>
+
+<section *ngIf="direction === 'right'" class="promotionGuide">
+  <div class="left">
+    <div class="image">
+      <img src="assets/images/{{ image }}" />
+    </div>
+  </div>
+  <div class="right">
+    <div class="text">
+      <h1>{{ title }}</h1>
+      <p>{{ text }}</p>
+    </div>
+  </div>
+</section>
