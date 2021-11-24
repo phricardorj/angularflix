@@ -85,6 +85,10 @@
   margin-bottom: 0.5rem;
 }
 
-.login-form footer a:visited {
+.login-form footer span {
   color: #0080ff;
+}
+
+.login-form footer span:hover {
+  cursor: pointer;
 }

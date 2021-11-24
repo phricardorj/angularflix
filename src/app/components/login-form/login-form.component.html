@@ -20,7 +20,7 @@
       <p>
         Esta página é protegida pelo Google reCAPTCHA para garantir que você não
         é um robô.
-        <a *ngIf="!showMore" href="#" (click)="showMore = true">Saiba mais.</a>
+        <span *ngIf="!showMore" href="#" (click)="showMore = true">Saiba mais.</span>
       </p>
       <p *ngIf="showMore">
         As informações recolhidas pelo Google reCAPTCHA estão sujeitas à
