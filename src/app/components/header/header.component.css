@@ -35,12 +35,17 @@ header .container .action {
   font-size: 28px;
 }
 
-header .container button {
-  background: #e50914;
+header .container .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #b63c03;
   height: 80px;
   width: 220px;
   border-radius: 10px;
   color: #fff;
+  text-decoration: none;
 
   outline: 0;
   box-shadow: 0;
@@ -50,9 +55,9 @@ header .container button {
   font-size: 28px;
 
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.5s;
 }
 
-header .container button:hover {
-  background: #fd000d;
+header .container .btn:hover {
+  background: #e50914;
 }
