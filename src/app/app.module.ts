@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,6 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SelectProfileComponent } from './pages/select-profile/select-profile.component';
 import { LoggedComponent } from './pages/logged/logged.component';
 import { LoginComponent } from './pages/login/login.component';
-
 
 @NgModule({
   declarations: [
@@ -28,7 +28,12 @@ import { LoginComponent } from './pages/login/login.component';
     LoggedComponent,
     LoginFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
