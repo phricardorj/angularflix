@@ -23,8 +23,7 @@ export class LoginFormComponent implements OnInit {
   }
 
   onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.loginForm.value);
+    // TODO: Send the user to logged route
   }
 
   constructor() {}

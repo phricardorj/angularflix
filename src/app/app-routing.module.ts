@@ -4,12 +4,13 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SelectProfileComponent } from './pages/select-profile/select-profile.component';
 import { LoggedComponent } from './pages/logged/logged.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'profiles', component: SelectProfileComponent },
-  { path: 'logged', component: LoggedComponent }
+  { path: 'profiles', component: SelectProfileComponent, canActivate: [AuthGuard] },
+  { path: 'logged', component: LoggedComponent, canActivate: [AuthGuard] },
+  { path: '**', component: HomePageComponent },
 ];
 
 @NgModule({
