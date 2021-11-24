@@ -18,6 +18,10 @@ export class LoginFormComponent implements OnInit {
 
   showMore = false;
 
+  toggleShowMore() {
+    this.showMore = !this.showMore;
+  }
+
   onSubmit() {
     // TODO: Use EventEmitter with form value
     console.warn(this.loginForm.value);

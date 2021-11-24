@@ -20,7 +20,12 @@
       <p>
         Esta página é protegida pelo Google reCAPTCHA para garantir que você não
         é um robô.
-        <span *ngIf="!showMore" href="#" (click)="showMore = true">Saiba mais.</span>
+        <span
+          href="#"
+          (click)="toggleShowMore()"
+          [ngClass]="{'visible': showMore }"
+          >Saiba mais.</span
+        >
       </p>
       <p *ngIf="showMore">
         As informações recolhidas pelo Google reCAPTCHA estão sujeitas à
