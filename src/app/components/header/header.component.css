@@ -1,5 +1,5 @@
 header {
-  height: 80vh;
+  min-height: 80vh;
   width: 100%;
 
   background: url("/assets/images/background.png");
@@ -17,21 +17,21 @@ header .container {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
 header .container h1 {
   font-size: 72px;
-  text-align: center;
   line-height: 6rem;
 }
 
 header .container .promo {
-  padding: 5px 0;
+  padding: 5px;
   font-size: 32px;
 }
 
 header .container .action {
-  padding: 30px 0;
+  padding: 30px 5px;
   font-size: 28px;
 }
 
@@ -60,4 +60,32 @@ header .container .btn {
 
 header .container .btn:hover {
   background: #e50914;
+}
+
+@media (max-width: 576px) {
+  header .logo {
+    text-align: center;
+  }
+
+  header .logo img {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  header .container h1 {
+    font-size: 32px;
+    line-height: 3rem;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  header .container .promo,
+  header .container .action {
+    font-size: 18px;
+  }
+
+  header .container .btn {
+    height: 60px;
+    font-size: 20px;
+  }
 }
