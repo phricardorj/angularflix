@@ -11,8 +11,9 @@ import { PromoRightComponent } from './components/promo-right/promo-right.compon
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SelectProfileComponent } from './pages/select-profile/select-profile.component';
-import { LoggedComponent } from './pages/logged/logged.component';
 import { LoginComponent } from './pages/login/login.component';
+import { CatalogComponent } from './pages/catalog/catalog.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -25,8 +26,9 @@ import { LoginComponent } from './pages/login/login.component';
     PromoRightComponent,
     HomePageComponent,
     SelectProfileComponent,
-    LoggedComponent,
     LoginFormComponent,
+    CatalogComponent,
+    PageNotFoundComponent
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
