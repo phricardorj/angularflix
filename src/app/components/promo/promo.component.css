@@ -9,6 +9,7 @@
   color: #fff;
   padding-left: 10vw;
   padding-right: 10vw;
+  overflow-x: hidden;
 }
 
 .promotionGuide h1 {
@@ -83,6 +84,6 @@
   }
 
   .promotionGuide .image img {
-    max-width: 90vw;
+    max-width: 85vw;
   }
 }
