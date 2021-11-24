@@ -9,9 +9,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SelectProfileComponent } from './pages/select-profile/select-profile.component';
-import { LoggedComponent } from './pages/logged/logged.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PromoComponent } from './components/promo/promo.component';
+import { CatalogComponent } from './pages/catalog/catalog.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -22,9 +23,10 @@ import { PromoComponent } from './components/promo/promo.component';
     HeaderComponent,
     HomePageComponent,
     SelectProfileComponent,
-    LoggedComponent,
     LoginFormComponent,
     PromoComponent,
+    CatalogComponent,
+    PageNotFoundComponent
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
