@@ -33,7 +33,7 @@ export class LoginFormComponent implements OnInit {
 
   url: string =
     'https://private-3923c4-santandercoders809.apiary-mock.com/login';
-  loginData: any = { users: 'squad08@letscode.com', password: 'squad08' };
+  loginData: any = {  };
   user: string = '';
   password: string = '';
   userIsValid: string = '';
@@ -63,16 +63,8 @@ export class LoginFormComponent implements OnInit {
   }
 
   checkIfUserIsValid(user: string, password: string) {
-    const users = JSON.parse(this.loginData).users;
-    const id = parseInt(user.replace(/[^0-9]/g, ''));
-
-    users.forEach((user: any) => {
-      if (user.id === id) this.userIsValid = 'Usuário válido';
-      else this.userIsValid = 'Usuário inválido';
-    });
-
-    console.log(this.userIsValid);
-    if (this.userIsValid === 'Usuário válido')
-      this.router.navigate(['/catalog']);
+    const validUsers = { email: 'squad08@letscode.com', phone: '99999999999', password: 'squad08' };
+    if ((user === validUsers.email || user === validUsers.phone) && password === validUsers.password)
+      this.router.navigate(['/profiles']);
   }
 }
