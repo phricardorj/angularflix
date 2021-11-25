@@ -7,6 +7,7 @@ import { PromotionalGuideComponent } from './promotional-guide/promotional-guide
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     LoginFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
