@@ -41,23 +41,42 @@
 
 
     <div class="shift">
-        <div class="carouselBox">
+        <!-- <div class="carouselBox">
             <app-card ></app-card>
             <app-card ></app-card>
             <app-card ></app-card>
             <app-card ></app-card>
             <app-card ></app-card>
             <app-card ></app-card>
+        </div> -->
+
+        <ul class="carouselBox">
+            <li *ngFor="let value of popular; let i = index"><app-card [serieId]="'6'"></app-card></li>
+        </ul>
+
+
+        <!-- <div class = "CirclePoint" *ngFor="let c of circles" 
+            [attr.id]="'Location' + c.id">
         </div>
+
+        <div class = "CirclePoint" *ngFor="let c of circles" 
+            attr.id="Location{{c.id}}">
+        </div> -->
+
+
 
         <div class="continue">
             Continuar assistindo como Usuário 1
         </div>
 
-        <div class="carouselBox">
+        <!-- <div class="carouselBox">
             <app-card ></app-card>
             <app-card ></app-card>
-        </div>
+        </div> -->
+
+        <ul class="carouselBox">
+            <li *ngFor="let i of keepWatching"><app-card serieId="7"></app-card></li>
+        </ul>
     </div>
 
 
