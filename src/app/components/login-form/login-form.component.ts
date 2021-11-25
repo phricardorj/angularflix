@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { LoginFormService } from '../login-form/login-form.service'
@@ -7,6 +8,7 @@ import { LoginFormService } from '../login-form/login-form.service'
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css'],
 })
+
 export class LoginFormComponent implements OnInit {
   loginForm = new FormGroup({
     user: new FormControl('', Validators.required),
@@ -20,6 +22,9 @@ export class LoginFormComponent implements OnInit {
   constructor(private loginFormService: LoginFormService) {}
 
   showMore = false;
+  toggleShowMore() {
+    this.showMore = !this.showMore;
+  }
 
   url: string = 'https://private-3923c4-santandercoders809.apiary-mock.com/login';
   loginData: any = {};

@@ -1,0 +1,113 @@
+header {
+  min-height: 80vh;
+  width: 100%;
+
+  background: #000;
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.5) 50%
+    ),
+    url("/assets/images/background.png");
+  background-size: cover;
+
+  color: #fff;
+}
+
+header .logo img {
+  padding: 30px 80px;
+}
+
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+header .container h1 {
+  padding: 5px;
+  font-size: 72px;
+  line-height: 6rem;
+}
+
+header .container .promo {
+  padding: 5px;
+  font-size: 32px;
+}
+
+header .container .action {
+  padding: 30px 15px;
+  font-size: 28px;
+}
+
+header .container .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #b63c03;
+  height: 80px;
+  width: 220px;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+
+  outline: 0;
+  box-shadow: 0;
+  border: 0;
+
+  margin: 20px 0;
+  font-size: 28px;
+
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+header .container .btn:hover {
+  background: #e50914;
+}
+
+@media (max-width: 992px) {
+  header .container h1 {
+    font-size: 48px;
+    line-height: 4rem;
+  }
+
+  header .container .promo,
+  header .container .action {
+    font-size: 24px;
+  }
+
+  header .container .btn {
+    height: 60px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  header .logo {
+    text-align: center;
+  }
+
+  header .logo img {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  header .container h1 {
+    font-size: 32px;
+    line-height: 3rem;
+  }
+
+  header .container .promo,
+  header .container .action {
+    font-size: 18px;
+  }
+
+  header .container .btn {
+    font-size: 20px;
+    height: 50px;
+  }
+}

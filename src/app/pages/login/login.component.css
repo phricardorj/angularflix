@@ -1,6 +1,6 @@
 .login-screen {
   min-height: 100vh;
-  background: black url("/assets/img/netflix-background.png");
+  background: black url("/assets/images/background.png");
   background-size: cover;
   display: flex;
   flex-flow: column nowrap;

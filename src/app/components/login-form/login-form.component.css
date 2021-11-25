@@ -36,7 +36,7 @@
   background-color: #e50914;
 }
 
-.login-form button {
+.login-form button:hover {
   cursor: pointer;
 }
 
@@ -64,7 +64,13 @@
   border-bottom: 2px solid #f28300;
 }
 
-.login-form input.ng-invalid.ng-touched ~ .warning-text {
+.login-form input.ng-invalid.ng-touched,
+.login-form form.ng-submitted input.ng-invalid {
+  border-bottom: 2px solid #f28300;
+}
+
+.login-form input.ng-invalid.ng-touched ~ .warning-text,
+.login-form form.ng-submitted input.ng-invalid ~ .warning-text {
   display: block;
 }
 
@@ -85,6 +91,14 @@
   margin-bottom: 0.5rem;
 }
 
-.login-form footer a:visited {
+.login-form footer span {
   color: #0080ff;
+}
+
+.login-form footer span.visible {
+  color: rgb(255, 211, 169);
+}
+
+.login-form footer span:hover {
+  cursor: pointer;
 }
