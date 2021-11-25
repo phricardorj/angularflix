@@ -33,7 +33,7 @@ export class LoginFormComponent implements OnInit {
 
   url: string =
     'https://private-3923c4-santandercoders809.apiary-mock.com/login';
-  loginData: any = {  };
+  loginData: any = {};
   user: string = '';
   password: string = '';
   userIsValid: string = '';
@@ -50,6 +50,14 @@ export class LoginFormComponent implements OnInit {
     const user = this.loginForm.get('user')?.value;
     const password = this.loginForm.get('password')?.value;
 
+    if (!user.includes('@')) {
+      let validPhone = false;
+      for (let i = 0; i < user.length - 1; i++) {
+        if (user[i] !== user[i + 1]) validPhone = true;
+      }
+      if (!/^\d+$/.test(user)) validPhone = false;
+    }
+
     this.loginFormService
       .postLogin(this.url, user, password)
       .subscribe((data) => (this.loginData = data));
@@ -64,8 +72,15 @@ export class LoginFormComponent implements OnInit {
   }
 
   checkIfUserIsValid(user: string, password: string) {
-    const validUsers = { email: 'admin@letscode.com', phone: '1234', password: '1234' };
-    if ((user === validUsers.email || user === validUsers.phone) && password === validUsers.password)
+    const validUsers = {
+      email: 'admin@letscode.com',
+      phone: '1234',
+      password: '1234',
+    };
+    if (
+      (user === validUsers.email || user === validUsers.phone) &&
+      password === validUsers.password
+    )
       this.router.navigate(['/profiles']);
   }
 }
