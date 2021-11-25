@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 interface Response {
   token: string;
@@ -29,19 +30,21 @@ export class LoginFormComponent implements OnInit {
 
   response: Response = { token: '' };
   onSubmit() {
-    this.http
-      .post<any>(
-        'https://private-3923c4-santandercoders809.apiary-mock.com/login',
-        {}
-      )
-      .subscribe((data) => {
-        this.response = data;
-        localStorage.setItem('token', this.response.token);
-        console.log(this.response);
-      });
+    if (this.loginForm.valid) {
+      this.http
+        .post<any>(
+          'https://private-3923c4-santandercoders809.apiary-mock.com/login',
+          {}
+        )
+        .subscribe((data) => {
+          this.response = data;
+          localStorage.setItem('token', this.response.token);
+          this.router.navigate(['catalog']);
+        });
+    }
   }
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {}
 }
