@@ -7,10 +7,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { CardComponent } from './components/card/card.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SelectProfileComponent } from './pages/select-profile/select-profile.component';
 import { LoginComponent } from './pages/login/login.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 import { PromoComponent } from './components/promo/promo.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
@@ -24,6 +26,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     HomePageComponent,
     SelectProfileComponent,
     LoginFormComponent,
+    CardComponent,
+    CarouselComponent,
     PromoComponent,
     CatalogComponent,
     PageNotFoundComponent
