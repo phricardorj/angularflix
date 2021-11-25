@@ -36,7 +36,7 @@
   background-color: #e50914;
 }
 
-.login-form button {
+.login-form button:hover {
   cursor: pointer;
 }
 
@@ -61,6 +61,11 @@
 
 .login-form input:focus {
   outline: none;
+  border-bottom: 2px solid #f28300;
+}
+
+.login-form input.ng-invalid.ng-touched,
+.login-form form.ng-submitted input.ng-invalid {
   border-bottom: 2px solid #f28300;
 }
 
