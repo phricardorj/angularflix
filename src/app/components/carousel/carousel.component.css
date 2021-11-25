@@ -1,0 +1,6 @@
+.carousel {
+    padding: 10px 0px;
+    cursor: grab;
+    overflow-x: scroll ;
+    background-color: tomato;
+}

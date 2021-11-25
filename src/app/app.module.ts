@@ -8,11 +8,13 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { PromoLeftComponent } from './components/promo-left/promo-left.component';
 import { PromoRightComponent } from './components/promo-right/promo-right.component';
+import { CardComponent } from './components/card/card.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SelectProfileComponent } from './pages/select-profile/select-profile.component';
-import { LoggedComponent } from './pages/logged/logged.component';
 import { LoginComponent } from './pages/login/login.component';
+import { CatalogComponent } from './pages/catalog/catalog.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 @NgModule({
@@ -25,8 +27,10 @@ import { LoginComponent } from './pages/login/login.component';
     PromoRightComponent,
     HomePageComponent,
     SelectProfileComponent,
-    LoggedComponent,
     LoginFormComponent,
+    CatalogComponent,
+    CardComponent,
+    CarouselComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
