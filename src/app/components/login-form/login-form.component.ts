@@ -58,12 +58,13 @@ export class LoginFormComponent implements OnInit {
 
     const token = JSON.parse(this.loginData).token;
     localStorage.setItem('token', token);
+    localStorage.setItem('users', this.loginData);
 
     this.checkIfUserIsValid(user, password);
   }
 
   checkIfUserIsValid(user: string, password: string) {
-    const validUsers = { email: 'squad08@letscode.com', phone: '99999999999', password: 'squad08' };
+    const validUsers = { email: 'admin@letscode.com', phone: '1234', password: '1234' };
     if ((user === validUsers.email || user === validUsers.phone) && password === validUsers.password)
       this.router.navigate(['/profiles']);
   }
