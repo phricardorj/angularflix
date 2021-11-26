@@ -73,9 +73,9 @@ export class LoginFormComponent implements OnInit {
 
   checkIfUserIsValid(user: string, password: string) {
     const validUsers = {
-      email: 'admin@letscode.com',
-      phone: '1234',
-      password: '1234',
+      email: 'squad8@letscode.com',
+      phone: '21912345678',
+      password: '123456',
     };
     if (
       (user === validUsers.email || user === validUsers.phone) &&
