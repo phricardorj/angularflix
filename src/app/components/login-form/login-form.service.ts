@@ -21,4 +21,16 @@ export class LoginFormService {
      })
    );
  }
+
+ getInfo(loginUrl: string){
+  return this.http.get(
+    loginUrl
+    ).pipe(
+    catchError((x) => {
+      console.log(x)
+      throw 'Deu erro'
+    })
+  );
+ }
+
 }
