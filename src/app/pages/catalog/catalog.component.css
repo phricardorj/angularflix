@@ -252,12 +252,10 @@ header .container {
 
 .cardInfo {
   background-color: aliceblue;
-  width: 200 px;
-  height: 500 px;
   position: absolute;
   left: 250px;
   top: 60px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .close {
@@ -272,6 +270,17 @@ header .container {
   top: 25px;
   right: 25px;
   cursor: pointer;
+}
+
+.background {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 300vh;
+  z-index: 1;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow-y: hidden;
 }
 
 @media screen and (max-width: 750px) {
