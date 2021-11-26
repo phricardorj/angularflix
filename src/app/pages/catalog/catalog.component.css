@@ -293,6 +293,14 @@ header .container {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .cardInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
 @media screen and (min-width: 750px) and (max-width: 991px) {
   .carouselBox {
     width: 700px;

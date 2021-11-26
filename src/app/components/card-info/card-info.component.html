@@ -1,47 +1,28 @@
-<!-- <div>
-    <p>{{ img }}</p>
-    <p>{{ relevance }}</p>
-    <p>{{ year }}</p>
-    <p>{{ minAge }}</p>
-    <p>{{ time }}</p>
-    <p>{{ description }}</p>
-    <p>{{ cast }}</p>
-    <p>{{ genre }}</p>
-    <p>{{ scenes }}</p>
-</div> -->
-
 <div class="container">
-    <header>
-        <img src="{{ img }}">
-        <img src="{{ titleImg }}" class="titleImg">
-        <button class="btn">
-            <img src="assets/images/play.png" />
-            <span>Assistir</span>
-        </button>
-    </header>
+  <header>
+    <img src="{{ img }}" />
+    <img src="{{ titleImg }}" class="titleImg" />
+    <button class="btn">
+      <img src="assets/images/play.png" />
+      <span>Assistir</span>
+    </button>
+  </header>
 
-    <footer>
-        <div class="left">
-            <div class="generalInfo">
-                <span class="relevance">{{ relevance }}% relevante</span> 2021 <div class="age">{{ minAge }}</div> {{ time }} minutos
-            </div>
-            <div class="description">
-                {{ description }}
-            </div>
-        </div>
-        <div class="right">
-            <div>
-                <span class="label">Elenco:</span> {{ cast }}
-            </div>
-            <div>
-                <span class="label">Gêneros:</span> {{ genre }}
-            </div>
-            <div>
-                <span class="label">Cenas e momentos:</span> {{ scenes }}
-            </div>
-        </div>
-    </footer>
-
+  <footer>
+    <div class="left">
+      <div class="generalInfo">
+        <span class="relevance">{{ relevance }}% relevante</span> 2021
+        <div class="age">{{ minAge }}</div>
+        {{ time }} minutos
+      </div>
+      <div class="description">
+        {{ description }}
+      </div>
+    </div>
+    <div class="right">
+      <div><span class="label">Elenco:</span> {{ cast }}</div>
+      <div><span class="label">Gêneros:</span> {{ genre }}</div>
+      <div><span class="label">Cenas e momentos:</span> {{ scenes }}</div>
+    </div>
+  </footer>
 </div>
-
-
