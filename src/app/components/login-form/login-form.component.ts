@@ -63,26 +63,27 @@ export class LoginFormComponent implements OnInit {
         if (user[i] !== user[i + 1]) validPhone = true;
       }
       if (!/^\d+$/.test(user)) validPhone = false;
-      if (user.length > 11) validPhone = false;
+      if (user.length !== 11) validPhone = false;
+
+      if (validPhone === false) return;
     }
 
     this.loginFormService
       .postLogin(this.url, user, password)
       .subscribe((data) => {
         this.loginData = data;
-        console.log(this.loginData);
       });
 
     this.loginData = await this.postLogin(user, password);
 
+    if (!this.checkIfUserIsValid(user, password)) return;
+
     const token = JSON.parse(`${this.loginData}`).token;
     localStorage.setItem('token', token);
     localStorage.setItem('users', `${this.loginData}`);
-
-    this.checkIfUserIsValid(user, password);
   }
 
-  checkIfUserIsValid(user: string, password: string) {
+  checkIfUserIsValid(user: string, password: string): boolean {
     const validUsers = {
       email: 'squad8@letscode.com',
       phone: '21912345678',
@@ -91,7 +92,10 @@ export class LoginFormComponent implements OnInit {
     if (
       (user === validUsers.email || user === validUsers.phone) &&
       password === validUsers.password
-    )
+    ) {
       this.router.navigate(['/profiles']);
+      return true;
+    }
+    return false;
   }
 }
