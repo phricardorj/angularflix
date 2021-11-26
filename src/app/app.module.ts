@@ -13,7 +13,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { PromoComponent } from './components/promo/promo.component';
 import { LogoutComponent } from './components/logout/logout.component';
 
@@ -32,7 +31,6 @@ import { CatalogComponent } from './pages/catalog/catalog.component';
     HeaderComponent,
     CardComponent,
     PromoComponent,
-    NavbarComponent,
     LogoutComponent,
     HomePageComponent,
     SelectProfileComponent,

@@ -1,5 +1,31 @@
 <header>
-  <app-navbar></app-navbar>
+  <nav class="navbar">
+    <a [routerLink]="['/catalog']" class="nav-logo">
+      <img src="/assets/images/logo.png" alt="Netflix Logo" />
+    </a>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a [routerLink]="['/catalog']" class="nav-link active">Início</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/catalog']" class="nav-link">Séries</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/catalog']" class="nav-link">Filmes</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/catalog']" class="nav-link">Bombando</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/catalog']" class="nav-link">Minha lista</a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
   <div class="container">
     <div id="title">
       <img src="/assets/images/title.png" alt="Netflix Logo" />
