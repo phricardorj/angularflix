@@ -7,17 +7,14 @@ import { LoginFormService } from 'src/app/components/login-form/login-form.servi
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-  // image: string;
   @Input() text: string ='';
-  // serieId: string;
   url: string = 'https://private-3923c4-santandercoders809.apiary-mock.com/series/';
   serie: any = {};
   image: string = '';
   property:number = 0;
 
   constructor(private loginFormService: LoginFormService) {
-    // this.serieId = this.elementRef.nativeElement.getAttribute('serieId');
-    // this.serieId = "1"
+
   }
 
   ngOnInit() {
