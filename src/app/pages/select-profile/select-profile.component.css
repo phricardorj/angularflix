@@ -81,3 +81,24 @@
   color: grey;
   margin: 0.6em 0;
 }
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .profile {
+    width: 125px;
+  }
+
+  .imgContainer {
+    width: 125px;
+    height: 125px;
+  }
+
+  .header-logo {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+}
