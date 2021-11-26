@@ -12,11 +12,7 @@ import { LoginFormService } from '../login-form/login-form.service';
 export class LoginFormComponent implements OnInit {
   loginForm = new FormGroup({
     user: new FormControl('', Validators.required),
-    password: new FormControl('', [
-      Validators.required,
-      Validators.minLength(4),
-      Validators.maxLength(60),
-    ]),
+    password: new FormControl('', [Validators.required]),
   });
 
   constructor(
