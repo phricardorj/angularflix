@@ -18,7 +18,7 @@ header {
 }
 
 header .container {
-  padding: 30px 5.5vw;
+  padding: 0px 5.5vw;
 }
 
 /* Navabar */
@@ -103,7 +103,7 @@ nav a {
   display: flex;
 
   position: absolute;
-  top: 650px;
+  top: 700px;
   left: 46px;
 
   padding: 50px;
@@ -129,7 +129,7 @@ nav a {
 .btnOptions {
   display: flex;
   position: absolute;
-  top: 615px;
+  top: 635px;
 }
 
 .btn {
@@ -182,4 +182,41 @@ nav a {
   position: absolute;
   left: 26px;
   bottom: 16px;
+}
+
+@media screen and (max-width: 750px) {
+  header {
+    background: #000;
+  }
+  header .container {
+    display: none;
+  }
+  .wrapper {
+    top: 60px;
+    left: -26px;
+  }
+  .wrapper h1 {
+    font-size: 18px;
+  }
+  .carouselBox {
+    width: 430px;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 991px) {
+  .carouselBox {
+    width: 700px;
+  }
+}
+
+@media screen and (min-width: 991px) and (max-width: 1400px) {
+  .carouselBox {
+    width: 850px;
+  }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+  .carouselBox {
+    width: 1000px;
+  }
 }

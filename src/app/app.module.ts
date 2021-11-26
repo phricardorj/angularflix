@@ -9,12 +9,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { SelectProfileComponent } from './pages/select-profile/select-profile.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PromoComponent } from './components/promo/promo.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     CardComponent,
     PromoComponent,
     CatalogComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
