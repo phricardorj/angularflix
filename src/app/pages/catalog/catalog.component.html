@@ -39,14 +39,20 @@
     <div class="category">
       <h1>Populares na Netflix</h1>
       <div class="carouselBox">
-        <app-card *ngFor="let value of popular" [text]="value.toString()"></app-card>
+        <app-card
+          *ngFor="let value of popular"
+          [text]="value.toString()"
+        ></app-card>
       </div>
     </div>
 
     <div class="category">
-      <h1>Continuar assistindo como Usuário{{ ' ' + userId }}</h1>
+      <h1>Continuar assistindo como Usuário{{ " " + userId }}</h1>
       <div class="carouselBox">
-        <app-card *ngFor="let value of keepWatching" [text]="value.toString()"></app-card>
+        <app-card
+          *ngFor="let value of keepWatching"
+          [text]="value.toString()"
+        ></app-card>
       </div>
     </div>
   </div>

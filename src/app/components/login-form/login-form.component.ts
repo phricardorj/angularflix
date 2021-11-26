@@ -68,7 +68,9 @@ export class LoginFormComponent implements OnInit {
 
     this.loginFormService
       .postLogin(this.url, user, password)
-      .subscribe((data) => {this.loginData = data; console.log(this.loginData);
+      .subscribe((data) => {
+        this.loginData = data;
+        console.log(this.loginData);
       });
 
     this.loginData = await this.postLogin(user, password);

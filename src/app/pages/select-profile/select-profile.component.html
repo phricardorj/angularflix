@@ -7,24 +7,20 @@
 
   <main class="container">
     <div class="profilesContainer">
-
-      <h1 class="title">
-        Quem está assistindo?
-      </h1>
+      <h1 class="title">Quem está assistindo?</h1>
 
       <ul class="profiles">
-
         <li class="profile" *ngFor="let user of userData.users">
           <a class="link">
             <div class="imgContainer">
-              <a routerLink="/catalog" (click)="selectUser(user.id)"><img src="{{ user.avatarUrl }}" class="img"></a>
+              <a routerLink="/catalog" (click)="selectUser(user.id)"
+                ><img src="{{ user.avatarUrl }}" class="img"
+              /></a>
             </div>
           </a>
           <span class="name">{{ user.name }}</span>
         </li>
-
       </ul>
-
     </div>
   </main>
 </div>

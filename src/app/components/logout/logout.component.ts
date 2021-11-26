@@ -4,11 +4,10 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-logout',
   templateUrl: './logout.component.html',
-  styleUrls: ['./logout.component.css']
+  styleUrls: ['./logout.component.css'],
 })
 export class LogoutComponent implements OnInit {
-
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     localStorage.removeItem('token');
@@ -17,5 +16,4 @@ export class LogoutComponent implements OnInit {
 
     this.router.navigate(['/']);
   }
-
 }

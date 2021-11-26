@@ -34,7 +34,7 @@ export class CardComponent implements OnInit {
   ngOnInit() {
     this.loginFormService.getInfo(`${this.url}${this.text}`).subscribe((x) => {
       this.serie = x;
-      const myvar =  this.serie['cardImage'];
+      const myvar = this.serie['cardImage'];
       this.image = this.serie['cardImage'];
     });
   }
