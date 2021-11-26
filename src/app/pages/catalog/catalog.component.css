@@ -310,7 +310,7 @@ header .container {
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
   .cardInfo {
     position: absolute;
     top: 0;
