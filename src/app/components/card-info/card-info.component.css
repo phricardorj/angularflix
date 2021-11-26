@@ -90,6 +90,10 @@ footer {
   cursor: pointer;
 }
 
+.btn:hover {
+  background-color: #dbd8d8e7;
+}
+
 .btn img {
   /* position: absolute; */
   /* left: 26px; */

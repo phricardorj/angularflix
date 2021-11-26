@@ -220,6 +220,10 @@ header .container {
   cursor: pointer;
 }
 
+.btn.gray:hover {
+  background-color: #696969;
+}
+
 .btn.gray span {
   position: absolute;
   left: 70px;
@@ -237,6 +241,10 @@ header .container {
   width: 180px;
   position: relative;
   cursor: pointer;
+}
+
+.btn.white:hover {
+  background-color: #dbd8d8e7;
 }
 
 .btn.white span {
