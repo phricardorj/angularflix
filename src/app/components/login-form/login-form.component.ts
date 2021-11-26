@@ -69,7 +69,11 @@ export class LoginFormComponent implements OnInit {
       if (!/^\d+$/.test(user)) validPhone = false;
       if (user.length !== 11) validPhone = false;
 
-      if (validPhone === false) return;
+      if (validPhone === false) {
+        this.loginForm.markAsTouched();
+        this.loginForm.controls['user'].setErrors({ incorrect: true });
+        return;
+      }
     }
 
     this.loginFormService
