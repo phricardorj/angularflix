@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
 import { LoginFormService } from 'src/app/components/login-form/login-form.service';
 
 @Component({
@@ -8,19 +8,20 @@ import { LoginFormService } from 'src/app/components/login-form/login-form.servi
 })
 export class CardComponent implements OnInit {
   // image: string;
-  serieId: string;
+  @Input() text: string ='';
+  // serieId: string;
   url: string = 'https://private-3923c4-santandercoders809.apiary-mock.com/series/';
   serie: any = {};
   image: string = '';
   property:number = 0;
 
-  constructor(private loginFormService: LoginFormService, private elementRef: ElementRef) {
-
-    this.serieId = this.elementRef.nativeElement.getAttribute('serieId');
+  constructor(private loginFormService: LoginFormService) {
+    // this.serieId = this.elementRef.nativeElement.getAttribute('serieId');
+    // this.serieId = "1"
   }
 
   ngOnInit() {
-    this.loginFormService.getInfo(`${this.url}${this.serieId}`).subscribe((x) => {
+    this.loginFormService.getInfo(`${this.url}${this.text}`).subscribe((x) => {
       this.serie = x;
       this.image = this.serie['cardImage'];
     });

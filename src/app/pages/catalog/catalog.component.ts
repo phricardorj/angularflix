@@ -12,6 +12,7 @@ export class CatalogComponent implements OnInit {
   loading = false;
   cards: any = {};
   popular: any = {};
+  popular2: any = ['5','6','7'];
   keepWatching: any = {};
   url: string = 'https://private-3923c4-santandercoders809.apiary-mock.com/';
 
