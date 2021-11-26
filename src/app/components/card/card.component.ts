@@ -1,4 +1,4 @@
-import { Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { LoginFormService } from 'src/app/components/login-form/login-form.service';
 
 @Component({
@@ -23,11 +23,5 @@ export class CardComponent implements OnInit {
       this.image = this.serie['cardImage'];
     });
   }
-
-
-  increment_property() {
-        return this.property++;
-  }
-   
 
 }
