@@ -1,51 +1,30 @@
-<div class="container">
+<div class="profiles-screen">
+  <header class="header-logo">
+    <a [routerLink]="['/']">
+      <img src="/assets/images/logo.png" alt="Netflix Logo" />
+    </a>
+  </header>
 
-  <div class="profilesContainer">
+  <main class="container">
+    <div class="profilesContainer">
 
-    <h1 class="title">
-      Quem está assistindo?
-    </h1>
+      <h1 class="title">
+        Quem está assistindo?
+      </h1>
 
-    <ul class="profiles">
+      <ul class="profiles">
 
-      <li class="profile">
-        <a class="link">
-          <div class="imgContainer">
-            <img class="img">
-          </div>
-        </a>
-        <span class="name">Usuário 1</span>
-      </li>
+        <li class="profile" *ngFor="let user of userData.users">
+          <a class="link">
+            <div class="imgContainer">
+              <a routerLink="/catalog" (click)="selectUser(user.id)"><img src="{{ user.avatarUrl }}" class="img"></a>
+            </div>
+          </a>
+          <span class="name">{{ user.name }}</span>
+        </li>
 
-      <li class="profile">
-        <a class="link">
-          <div class="imgContainer">
-            <img class="img">
-          </div>
-        </a>
-        <span class="name">Usuário 2</span>
-      </li>
+      </ul>
 
-      <li class="profile">
-        <a class="link">
-          <div class="imgContainer">
-            <img class="img">
-          </div>
-        </a>
-        <span class="name">Usuário 3</span>
-      </li>
-
-      <li class="profile">
-        <a class="link">
-          <div class="imgContainer">
-            <img class="img">
-          </div>
-        </a>
-        <span class="name">Usuário 4</span>
-      </li>
-
-    </ul>
-
-  </div>
-
+    </div>
+  </main>
 </div>
