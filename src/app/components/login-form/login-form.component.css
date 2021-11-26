@@ -102,3 +102,10 @@
 .login-form footer span:hover {
   cursor: pointer;
 }
+
+@media (max-width: 576px) {
+  .login-form {
+    padding: 2rem;
+    padding-top: 3rem;
+  }
+}

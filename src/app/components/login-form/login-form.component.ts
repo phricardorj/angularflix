@@ -4,6 +4,17 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginFormService } from '../login-form/login-form.service';
 
+interface LoginData {
+  token?: String;
+  users?: Array<Users>;
+}
+
+interface Users {
+  id: number;
+  name: String;
+  avatarUrl: String;
+}
+
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
@@ -11,12 +22,8 @@ import { LoginFormService } from '../login-form/login-form.service';
 })
 export class LoginFormComponent implements OnInit {
   loginForm = new FormGroup({
-    user: new FormControl('', Validators.required),
-    password: new FormControl('', [
-      Validators.required,
-      Validators.minLength(4),
-      Validators.maxLength(60),
-    ]),
+    user: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required]),
   });
 
   constructor(
@@ -33,7 +40,7 @@ export class LoginFormComponent implements OnInit {
 
   url: string =
     'https://private-3923c4-santandercoders809.apiary-mock.com/login';
-  loginData: any = {};
+  loginData: LoginData | unknown | string = {};
   user: string = '';
   password: string = '';
   userIsValid: string = '';
@@ -56,17 +63,19 @@ export class LoginFormComponent implements OnInit {
         if (user[i] !== user[i + 1]) validPhone = true;
       }
       if (!/^\d+$/.test(user)) validPhone = false;
+      if (user.length > 11) validPhone = false;
     }
 
     this.loginFormService
       .postLogin(this.url, user, password)
-      .subscribe((data) => (this.loginData = data));
+      .subscribe((data) => {this.loginData = data; console.log(this.loginData);
+      });
 
     this.loginData = await this.postLogin(user, password);
 
-    const token = JSON.parse(this.loginData).token;
+    const token = JSON.parse(`${this.loginData}`).token;
     localStorage.setItem('token', token);
-    localStorage.setItem('users', this.loginData);
+    localStorage.setItem('users', `${this.loginData}`);
 
     this.checkIfUserIsValid(user, password);
   }
