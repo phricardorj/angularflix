@@ -58,7 +58,7 @@
     </div>
 
     <div class="category">
-      <h1>Continuar assistindo como Usuário 1</h1>
+      <h1>Continuar assistindo como Usuário{{ ' ' + userId }}</h1>
       <div class="carouselBox">
         <app-card *ngFor="let value of keepWatching" [text]="value"></app-card>
       </div>

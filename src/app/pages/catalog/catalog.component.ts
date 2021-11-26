@@ -8,6 +8,7 @@ import { LoginFormService } from 'src/app/components/login-form/login-form.servi
 })
 export class CatalogComponent implements OnInit {
   constructor(private loginFormService: LoginFormService) {}
+  userId = '';
   loading = false;
   cards: any = {};
   popular: any = {};
@@ -16,8 +17,11 @@ export class CatalogComponent implements OnInit {
   url: string = 'https://private-3923c4-santandercoders809.apiary-mock.com/';
 
   ngOnInit() {
+    const userId = localStorage.getItem('userId');
+    if (userId) this.userId = userId;
+
     this.loading = true;
-    this.loginFormService.getInfo(`${this.url}${'users/1'}`).subscribe((x) => {
+    this.loginFormService.getInfo(`${this.url}users/1`).subscribe((x) => {
       this.cards = x;
       this.loading = false;
       this.popular = this.cards['popular'];
