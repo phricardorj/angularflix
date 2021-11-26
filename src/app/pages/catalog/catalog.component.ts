@@ -6,6 +6,21 @@ interface Cards {
   popular?: Array<number>;
 }
 
+interface Series {
+  cardImage?: String;
+  titleImage?: String;
+  backgroundImage?: String;
+  relevance?: number;
+  year?: number;
+  minAge?: number;
+  time?: number;
+  season?: null;
+  description?: String;
+  cast?: Array<String>;
+  genre?: Array<String>;
+  scenes?: Array<String>;
+}
+
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
@@ -13,6 +28,8 @@ interface Cards {
 })
 export class CatalogComponent implements OnInit {
   constructor(private loginFormService: LoginFormService) {}
+  show = false;
+  serie: Series = {};
   userId = '';
   loading = false;
   cards: Cards = {};
@@ -32,5 +49,20 @@ export class CatalogComponent implements OnInit {
       this.popular = this.cards['popular'];
       this.keepWatching = this.cards['keepWatching'];
     });
+  }
+
+  showInfo(value: number) {
+    this.loginFormService
+      .getInfo(`${this.url}${'series/'}${value}`)
+      .subscribe((x) => {
+        this.serie = x;
+      });
+
+    this.show = true;
+  }
+
+  close() {
+    this.serie = {};
+    this.show = false;
   }
 }

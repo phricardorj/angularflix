@@ -15,6 +15,7 @@ import { CardComponent } from './components/card/card.component';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { PromoComponent } from './components/promo/promo.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { CardInfoComponent } from './components/card-info/card-info.component';
 
 // Páginas
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -32,6 +33,7 @@ import { CatalogComponent } from './pages/catalog/catalog.component';
     CardComponent,
     PromoComponent,
     LogoutComponent,
+    CardInfoComponent,
     HomePageComponent,
     SelectProfileComponent,
     LoginFormComponent,

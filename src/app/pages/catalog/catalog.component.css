@@ -250,6 +250,30 @@ header .container {
   bottom: 16px;
 }
 
+.cardInfo {
+  background-color: aliceblue;
+  width: 200 px;
+  height: 500 px;
+  position: absolute;
+  left: 250px;
+  top: 60px;
+  z-index: 1;
+}
+
+.close {
+  background-color: #141414;
+  display: flex;
+  justify-content: center;
+  color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 750px) {
   header {
     background: #000;

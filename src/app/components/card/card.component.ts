@@ -22,7 +22,7 @@ interface Series {
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
-  @Input() text: string = '';
+  @Input() text: number = 0;
   url: string =
     'https://private-3923c4-santandercoders809.apiary-mock.com/series/';
   serie: Series = {};
