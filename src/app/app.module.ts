@@ -15,6 +15,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { PromoComponent } from './components/promo/promo.component';
 import { CatalogComponent } from './pages/catalog/catalog.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { LogoutComponent } from './components/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
     CardComponent,
     PromoComponent,
     CatalogComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
