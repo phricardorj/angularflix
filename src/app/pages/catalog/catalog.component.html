@@ -18,6 +18,7 @@
         <div id="title">
             <img src="/assets/images/title.png" alt="Netflix Logo" />
         </div>
+<<<<<<< Updated upstream
 
         <div id="topToday">
             <div id="top10">TOP 10</div>Brasil: top 2 de hoje
@@ -55,6 +56,45 @@
         <div class="carouselBox">
             <app-card *ngFor="let value of keepWatching" [text]="value"></app-card>
         </div>
+=======
+        <p>Brasil: Top 2 de hoje</p>
+      </div>
+
+      <div id="description">
+        Um agente do FBI persegue o ladrão de arte mais procurado do mundo. Ele
+        só não esperava ter seu alvo como parceiro para prender uma bandida
+        muito esperta.
+      </div>
+
+      <div class="btnOptions">
+        <button class="btn white">
+          <img src="assets/images/play.png" />
+          <span>Assistir</span>
+        </button>
+        <button class="btn gray">
+          <img src="assets/images/info.png" />
+          <span>Mais informações</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="wrapper">
+  <div>
+    <div class="category">
+      <h1>Populares na Netflix</h1>
+      <div class="carouselBox">
+        <app-card *ngFor="let value of popular" [text]="value"> </app-card>
+      </div>
+    </div>
+
+    <div class="category">
+      <h1>Continuar assistindo como Usuário 1</h1>
+      <div class="carouselBox">
+        <app-card *ngFor="let value of keepWatching" [text]="value"></app-card>
+      </div>
+>>>>>>> Stashed changes
     </div>
 
 
