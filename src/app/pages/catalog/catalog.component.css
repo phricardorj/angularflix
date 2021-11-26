@@ -293,15 +293,22 @@ header .container {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   .cardInfo {
     position: absolute;
     top: 0;
     left: 0;
   }
+
+  .carouselBox {
+    padding-left: 3vw;
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-@media screen and (min-width: 750px) and (max-width: 991px) {
+/* @media screen and (min-width: 750px) and (max-width: 991px) {
   .carouselBox {
     width: 700px;
   }
@@ -317,4 +324,4 @@ header .container {
   .carouselBox {
     width: 1000px;
   }
-}
+} */
