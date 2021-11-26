@@ -16,7 +16,8 @@
   font-size: 50px;
 }
 
-.promotionGuide .left, .promotionGuide .right {
+.promotionGuide .left,
+.promotionGuide .right {
   padding: 20px;
 }
 

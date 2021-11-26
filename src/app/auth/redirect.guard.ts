@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root',
 })
-export class AuthGuard implements CanActivate {
+export class RedirectGuard implements CanActivate {
   constructor(private router: Router) {}
 
   canActivate(
@@ -22,7 +22,7 @@ export class AuthGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (localStorage.getItem('token')) return true;
-    return this.router.parseUrl('/login');
+    if (!localStorage.getItem('token')) return true;
+    return this.router.parseUrl('/profiles');
   }
 }

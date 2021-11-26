@@ -1,20 +1,32 @@
 <header>
+  <nav class="navbar">
+    <a [routerLink]="['/catalog']" class="nav-logo">
+      <img src="/assets/images/logo.png" alt="Netflix Logo" />
+    </a>
+    <ul class="nav-menu">
+      <li class="nav-item">
+        <a [routerLink]="['/catalog']" class="nav-link active">Início</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/catalog']" class="nav-link">Séries</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/catalog']" class="nav-link">Filmes</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/catalog']" class="nav-link">Bombando</a>
+      </li>
+      <li class="nav-item">
+        <a [routerLink]="['/catalog']" class="nav-link">Minha lista</a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
   <div class="container">
-    <nav>
-      <div class="logo">
-        <a [routerLink]="['/catalog']">
-          <img src="/assets/images/logo.png" alt="Netflix Logo" />
-        </a>
-      </div>
-      <ul>
-        <li><a [routerLink]="['/catalog']">Início</a></li>
-        <li><a [routerLink]="['/catalog']">Séries</a></li>
-        <li><a [routerLink]="['/catalog']">Filmes</a></li>
-        <li><a [routerLink]="['/catalog']">Bombando</a></li>
-        <li><a [routerLink]="['/catalog']">Minha lista</a></li>
-      </ul>
-    </nav>
-
     <div id="title">
       <img src="/assets/images/title.png" alt="Netflix Logo" />
     </div>
@@ -53,14 +65,22 @@
     <div class="category">
       <h1>Populares na Netflix</h1>
       <div class="carouselBox">
-        <app-card *ngFor="let value of popular" [text]="value" (click)="showInfo(value)"></app-card>
+        <app-card
+          *ngFor="let value of popular"
+          [text]="value"
+          (click)="showInfo(value)"
+        ></app-card>
       </div>
     </div>
 
     <div class="category">
-      <h1>Continuar assistindo como Usuário 1</h1>
+      <h1>Continuar assistindo como Usuário{{ " " + userId }}</h1>
       <div class="carouselBox">
-        <app-card *ngFor="let value of keepWatching" [text]="value" (click)="showInfo(value)"></app-card>
+        <app-card
+          *ngFor="let value of keepWatching"
+          [text]="value"
+          (click)="showInfo(value)"
+        ></app-card>
       </div>
     </div>
   </div>
@@ -68,16 +88,16 @@
 
 <div class="cardInfo" *ngIf="show">
   <app-card-info
-  [img]="this.serie['backgroundImage']"
-  [titleImg]="this.serie['titleImage']"
-  [relevance]="this.serie['relevance']"
-  [year]="this.serie['year']"
-  [minAge]="this.serie['minAge']"
-  [time]="this.serie['time']"
-  [description]="this.serie['description']"
-  [cast]="this.serie['cast']"
-  [genre]="this.serie['genre']"
-  [scenes]="this.serie['scenes']"
+    [img]="this.serie['backgroundImage']"
+    [titleImg]="this.serie['titleImage']"
+    [relevance]="this.serie['relevance']"
+    [year]="this.serie['year']"
+    [minAge]="this.serie['minAge']"
+    [time]="this.serie['time']"
+    [description]="this.serie['description']"
+    [cast]="this.serie['cast']"
+    [genre]="this.serie['genre']"
+    [scenes]="this.serie['scenes']"
   ></app-card-info>
   <div class="close" (click)="close()">X</div>
 </div>
