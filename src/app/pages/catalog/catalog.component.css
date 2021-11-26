@@ -272,6 +272,8 @@ header .container {
   top: 25px;
   right: 25px;
   cursor: pointer;
+}
+
 @media screen and (max-width: 750px) {
   header {
     background: #000;

@@ -51,21 +51,11 @@ export class CatalogComponent implements OnInit {
     });
   }
 
-  showInfo(value: string) {
+  showInfo(value: number) {
     this.loginFormService
       .getInfo(`${this.url}${'series/'}${value}`)
       .subscribe((x) => {
         this.serie = x;
-        console.log(this.serie['backgroundImage']);
-        console.log(this.serie['titleImage']);
-        console.log(this.serie['relevance']);
-        console.log(this.serie['year']);
-        console.log(this.serie['minAge']);
-        console.log(this.serie['time']);
-        console.log(this.serie['description']);
-        console.log(this.serie['cast']);
-        console.log(this.serie['genre']);
-        console.log(this.serie['scenes']);
       });
 
     this.show = true;
