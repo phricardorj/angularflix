@@ -1,5 +1,7 @@
 # Netflix Clone UI 
 
+![Netflix App Angular](./src/assets/images/netflix-angular-app.gif)
+  
 # ⚙️ Tecnologias usadas neste projeto
 - [Angular](https://angular.io/)
 - [Typescript](https://www.typescriptlang.org/)
