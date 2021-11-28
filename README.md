@@ -27,9 +27,9 @@ $ ng serve --open
 
 # 👤 Dados para Login
 
-E-mail: squad8@letscode.com
-Telefone: 21912345678
-Senha: 123456
+- E-mail: squad8@letscode.com
+- Telefone: 21912345678
+- Senha: 123456
 
 Essas informações, você poderá alterar em “src/app/components/login-form/login-form.component.ts” ou, até mesmo, fazer uma integração com banco de dados.
 
