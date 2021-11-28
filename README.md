@@ -8,6 +8,22 @@ Netflix (Clone UI) desenvolvida em Angular, totalmente, responsiva.
 - [Angular](https://angular.io/)
 - [Typescript](https://www.typescriptlang.org/)
 
+# 💻 Executando o projeto
+Execute os comandos no seu terminal:
+
+```
+# Clone o repositório
+$ git clone https://github.com/SamGCM/netflix-lets-code.git
+
+# Entre no diretório
+$ cd netflix-lets-code
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação
+$ ng serve
+```
 ## 🖖 Squad Members<br>
 <table>
   <tr>
@@ -45,6 +61,3 @@ Netflix (Clone UI) desenvolvida em Angular, totalmente, responsiva.
     </td>
   </tr>
 </table>
-
-
-
