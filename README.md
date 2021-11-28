@@ -1,4 +1,6 @@
-# Netflix Clone UI 
+# 📺 | Netflix Clone UI 
+
+Netflix (Clone UI) desenvolvida em Angular, totalmente, responsiva.
 
 ![Netflix App Angular](./src/assets/images/netflix-angular-app.gif)
   
