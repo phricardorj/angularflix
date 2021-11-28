@@ -13,16 +13,16 @@ Execute os comandos no seu terminal:
 
 ```
 # Clone o repositório
-$ git clone https://github.com/SamGCM/netflix-lets-code.git
+$ git clone https://github.com/phricardorj/netflix-angular.git
 
 # Entre no diretório
-$ cd netflix-lets-code
+$ cd netflix-angular
 
 # Instale as dependências
-$ npm install
+$ npm i
 
 # Execute a aplicação
-$ ng serve
+$ ng serve --open
 ```
 ## 🖖 Squad Members<br>
 <table>
