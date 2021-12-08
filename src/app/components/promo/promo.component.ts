@@ -10,7 +10,6 @@ export class PromoComponent implements OnInit {
   @Input() title = '';
   @Input() image = '';
   @Input() text = '';
-  @Input() type = '';
 
   constructor() {}
 
