@@ -53,14 +53,6 @@ Essas informações, você poderá alterar em “src/app/components/login-form/l
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/josebiaggio">
-        <img src="https://avatars.githubusercontent.com/u/48135105" width="100px;" alt="josebiaggio"/><br>
-        <sub>
-          <b>José Biaggio</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
       <a href="https://github.com/LucasSuplino">
         <img src="https://avatars.githubusercontent.com/u/31294320" width="100px;" alt="LucasSuplino"/><br>
         <sub>
